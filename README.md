@@ -7,6 +7,7 @@ install:
 
  * xutils-dev
  * libx11-dev
+ * libxext-dev
  * make
  * gcc
 
