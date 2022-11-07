@@ -19,6 +19,7 @@ the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.  */
 #include <X11/keysym.h>
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
+#include <X11/XKBlib.h>
 
 #include "drawpixmaps.h"
 #include "drawtext.h"
@@ -122,7 +123,8 @@ char Title()
 	      if (event.xbutton.button == Button1) return('p');
 	      break;
 	    case KeyPress:
-	      keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0);
+	      /* keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0); */
+	      keysym = XkbKeycodeToKeysym(display, event.xkey.keycode, 0, event.xkey.state & ShiftMask ? 1 : 0);
 	      switch (keysym)
               {
 		case XK_e: return('e');

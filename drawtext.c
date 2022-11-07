@@ -74,7 +74,7 @@ void DrawTextField()
 /*   XFlush(display); */
 } /* DrawTextField() */
 
-void WriteTextStr(const unsigned char *str, int x, int y, int fg, int bg)
+void WriteTextStr(const char *str, int x, int y, int fg, int bg)
 {
   int i, len;
 

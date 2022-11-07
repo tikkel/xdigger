@@ -44,7 +44,7 @@ Pixmap MakePixmap(char **pixmap_xpm, int mag)
   /* Colormap colormap; */
   XColor color; /*, exact;*/
   int xpm_width, xpm_height, xpm_num_colors, xpm_chars_per_pixel;
-  int i, j, x, y, z, f, countpixel;
+  int i, j, x, y, z, f;
   int char2color[256];
   char c, *value;
 /*   float red, green, blue; */
@@ -67,8 +67,6 @@ Pixmap MakePixmap(char **pixmap_xpm, int mag)
       char2color[(unsigned char)pixmap_xpm[z][0]] = color.pixel;
     }
 
-  countpixel = 0;
-
   for (y=0; y<xpm_height; y++) for (x=0; x<xpm_width; x++)
     {
       c = pixmap_xpm[y+xpm_num_colors+1][x];
@@ -82,7 +80,8 @@ Pixmap MakePixmap(char **pixmap_xpm, int mag)
   pixmap = XCreatePixmap(display, mainwindow, xpm_width*mag, xpm_height*mag, xdefaultdepth);
   { /* Kontrolle ob pixmap gueltig: */
     Window r;
-    int x, y, w, h, b, d;
+    int x, y;
+    unsigned int w, h, b, d;
     if (XGetGeometry(display, mainwindow, &r, &x, &y, &w, &h, &b, &d) == 
 	BadAlloc)
       {
@@ -97,7 +96,7 @@ Pixmap MakePixmap(char **pixmap_xpm, int mag)
 } /* Pixmap MakePixmap(char **pixmap_xpm, int mag) */
 
 Pixmap XCreateMagBitmapFromData(data, width, height, mag)
-char *data;
+unsigned char *data;
 unsigned int width, height, mag;
 {
   /*char *imdata;*/

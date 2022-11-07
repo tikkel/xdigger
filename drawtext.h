@@ -28,8 +28,7 @@ extern unsigned long gc_text_mask;
 
 extern void ClearCharField(int bg, Bool todraw);
 extern void DrawTextField();
-extern void WriteTextStr(const unsigned char *str, int x, int y, 
-			 int fg, int bg);
+extern void WriteTextStr(char *str, int x, int y, int fg, int bg);
 extern void Mark_CharField(XExposeEvent *xexpose, int max_y);
 
 #endif

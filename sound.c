@@ -50,7 +50,7 @@ the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.  */
 #include "sound.h"
 
 int ton_laenge[3];
-unsigned char ton_buffer[3][2000];
+char ton_buffer[3][2000];
 int sound_device = SD_AUTO;
 Bool soundserver_started = False;
 
@@ -183,7 +183,7 @@ void StartSoundServer()
     }
 } /* StartSoundServer */
 
-void Create_SND_Header(unsigned char *header, unsigned long data_size)
+void Create_SND_Header(char *header, unsigned long data_size)
 {
   int sample_rate = TON_AUDIO_RATE;
   

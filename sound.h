@@ -25,12 +25,10 @@ the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.  */
 extern void sound_init();
 extern void sound(char ton_typ);
 extern void sound_done();
-extern void Fill_TonBuffer(int ton_low, int ton_high, int korrektur,
-                           Bool sndheader);
-
+extern void Fill_TonBuffer(int ton_low, int ton_high, int korrektur, Bool sndheader);
 extern int sound_device;
 extern int ton_laenge[3];
-extern unsigned char ton_buffer[3][2000];
+extern char ton_buffer[3][2000];
 
 #define SD_AUTO -1
 #define SD_NONE  0

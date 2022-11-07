@@ -23,6 +23,7 @@ the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.  */
 #include <X11/Xatom.h>
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
+#include <X11/XKBlib.h>
 
 #include "configure.h"
 #include "defines.h"
@@ -1273,7 +1274,8 @@ void RunLevels(int von_level, int bis_level)
 	      XRefreshKeyboardMapping(&event.xmapping);
 	      break;
 	    case KeyPress:
-	      keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0);
+	      /* keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0); */
+	      keysym = XkbKeycodeToKeysym(display, event.xkey.keycode, 0, event.xkey.state & ShiftMask ? 1 : 0);
 	      switch (keysym)
               {
 		case XK_Return:
@@ -1379,7 +1381,8 @@ void RunLevels(int von_level, int bis_level)
 		strcpy(scheat, "");
 	      break;
 	    case KeyRelease:
-	      keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0);
+	      /* keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0); */
+	      keysym = XkbKeycodeToKeysym(display, event.xkey.keycode, 0, event.xkey.state & ShiftMask ? 1 : 0);
 
 	      if (keysym == XK_Left) {
 		if (rd_left) kb_left = False;
@@ -1514,7 +1517,8 @@ void ALookAtTheRooms()
 		}
 	      break;
 	    case KeyPress:
-	      keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0);
+	      /* keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0); */
+	      keysym = XkbKeycodeToKeysym(display, event.xkey.keycode, 0, event.xkey.state & ShiftMask ? 1 : 0);
 	      switch (keysym)
               {
                 case XK_Left:
@@ -1913,7 +1917,8 @@ void LevelEditor()
               Handle_MotionEvent_mainwindow(&event.xmotion);
               break;
             case KeyPress:
-              keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0);
+              /* keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0); */
+	      keysym = XkbKeycodeToKeysym(display, event.xkey.keycode, 0, event.xkey.state & ShiftMask ? 1 : 0);
               switch (keysym)
               {
                 case XK_p:
@@ -1982,7 +1987,8 @@ void LevelEditor()
               Handle_ButtonPressEvent_toolswindow(&event.xbutton);
               break;
             case KeyPress:
-              keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0);
+              /* keysym = XKeycodeToKeysym(display, event.xkey.keycode, 0); */
+              keysym = XkbKeycodeToKeysym(display, event.xkey.keycode, 0, event.xkey.state & ShiftMask ? 1 : 0);
               switch (keysym)
               {
                 case XK_q: 
