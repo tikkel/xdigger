@@ -6,6 +6,7 @@ You are a little (digger-)man and have to collect diamonds.
 install:
 
  * xutils-dev
+ * libx11-dev
  * make
  * gcc
 
