@@ -14,6 +14,7 @@ Now you can test the game. If you want to install the game
 do the following two steps:
 
  * xmkmf
+ * sed -i 's/-D_BSD_SOURCE -D_SVID_SOURCE/-D_DEFAULT_SOURCE/g' Makefile (imake bug workaround)
  * make
  * ./xdigger -h
  * ./xdigger -6 -sound dsp
@@ -60,3 +61,4 @@ Levels created by:
 
 Alexander Lang
 lang@mueritz-comp.de
+
