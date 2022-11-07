@@ -5,14 +5,17 @@ You are a little (digger-)man and have to collect diamonds.
 
 install:
 
- * xmkmf
+ * xutils-dev
  * make
+ * gcc
 
 Now you can test the game. If you want to install the game
-do the following two steps (as root):
+do the following two steps:
 
- * make install
- * make install.man
+ * xmkmf
+ * make
+ * make install (as root)
+ * make install.man (as root)
 
 If you want to use NAS (Network Audio System) or RPlay, edit first the 
 configure.h file.
