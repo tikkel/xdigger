@@ -8,7 +8,7 @@ install:
  * xutils-dev libx11-dev libxext-dev
  * make
  * gcc
- * libfuse2 osspd osspd-pulseaudio (/dev/dsp osspd)
+ * libfuse2 osspd osspd-pulseaudio (/dev/dsp <- osspd.service)
 
 Now you can test the game. If you want to install the game
 do the following two steps:
@@ -16,6 +16,7 @@ do the following two steps:
  * xmkmf
  * make
  * ./xdigger -h
+ * ./xdigger -6 -sound dsp
  * make install (as root)
  * make install.man (as root)
 
