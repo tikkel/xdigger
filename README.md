@@ -5,11 +5,10 @@ You are a little (digger-)man and have to collect diamonds.
 
 install:
 
- * xutils-dev
- * libx11-dev
- * libxext-dev
+ * xutils-dev libx11-dev libxext-dev
  * make
  * gcc
+ * libfuse2 osspd osspd-pulseaudio (/dev/dsp osspd)
 
 Now you can test the game. If you want to install the game
 do the following two steps:
