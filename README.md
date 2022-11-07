@@ -16,6 +16,7 @@ do the following two steps:
 
  * xmkmf
  * make
+ * ./xdigger -h
  * make install (as root)
  * make install.man (as root)
 
