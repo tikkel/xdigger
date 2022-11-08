@@ -59,6 +59,7 @@ Levels created by:
 30 Alexander Lang
 
 
+Original programmed by:
 Alexander Lang
 lang@mueritz-comp.de
 
