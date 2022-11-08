@@ -1,5 +1,7 @@
 #include "configure.h"
 
+#Imake rules: https://www.rpi.edu/dept/cis/sss/develop/0.1/common/config/Imake.rules
+
 BINDIR=/usr/bin/X11
 MANDIR=$(MANSOURCEPATH)6
 MANSUFFIX=6
@@ -22,6 +24,7 @@ LOCAL_LIBRARIES = $(XLIB) $(RPLAYLIB) $(NASLIB)
          icon.o sound.o
 
 ComplexProgramTarget(xdigger)
+
 InstallNonExecFile(xdigger.level,XDIGGER_LIB_DIR)
 #ifdef SOUND_RPLAY
 InstallNamedNonExec(audio/diamond.au,diamond.au,XDIGGER_LIB_DIR)
@@ -29,8 +32,9 @@ InstallNamedNonExec(audio/step.au,step.au,XDIGGER_LIB_DIR)
 InstallNamedNonExec(audio/stone.au,stone.au,XDIGGER_LIB_DIR)
 #endif
 InstallNamedNonExec(pixmaps/xdigger.xpm,xdigger.xpm,$(ICONDIR))
-/* InstallNonExecFileNoClobber(xdigger.hiscore,XDIGGER_HISCORE_DIR) */
+InstallScript(xdigger.desktop,/usr/share/applications)
 
+/* InstallNonExecFileNoClobber(xdigger.hiscore,XDIGGER_HISCORE_DIR) */
 install::
 	$(MKDIRHIER) XDIGGER_HISCORE_DIR
 	touch XDIGGER_HISCORE_DIR/xdigger.hiscore
