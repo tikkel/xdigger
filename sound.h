@@ -38,7 +38,11 @@ extern char ton_buffer[3][2000];
 #define SD_RPLAY 4
 #define SD_NAS   5
 
-#define KC_FREQ 58472
+#define CPU_FREQ_KC85_2   1750000   //CPU-Takt KC85/2
+#define CPU_FREQ_KC85_3   1750000   //CPU-Takt KC85/3
+#define CPU_FREQ_KC85_4   1773447.5 //CPU-Takt KC85/4
+#define KC_CTC_FREQ_VT16  109375    //CPU_FREQ_KC85_3 / 16  //VT16  -> 109375Hz
+#define KC_CTC_FREQ_VT256 6836      //CPU_FREQ_KC85_3 / 256 //VT256 -> 6835,9375Hz
 
 #define TON_DSP_LOW 0x40
 #define TON_DSP_HIGH 0xc0

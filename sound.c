@@ -156,7 +156,7 @@ void StartSoundServer()
 	      
 		  fd = open("/dev/dsp", O_WRONLY, 0); 
 		  ioctl(fd, SOUND_PCM_WRITE_RATE, &rate);
-		  ioctl(fd, SOUND_PCM_WRITE_CHANNELS, &channels);
+      ioctl(fd, SOUND_PCM_WRITE_CHANNELS, &channels);
 		  ioctl(fd, SOUND_PCM_WRITE_BITS, &bits);
 		}
 #endif
@@ -200,44 +200,48 @@ void Create_SND_Header(char *header, unsigned long data_size)
 void Fill_TonBuffer(int ton_low, int ton_high, int rate, Bool sndheader)
 {
 
-  int i, j, k, offset;
+  int i, j, k, n, offset;
   unsigned char augenblicklicherpeak;
 
   if (sndheader) offset = 24; else offset = 0;
-  
+
   /* TON_SCHRITT */
   augenblicklicherpeak=ton_low;
-  for (i=0,j=2; j>0; j--)
-    {
-      for(k=0;k<0x40;k++)
-	ton_buffer[TON_SCHRITT][offset+rate*i++/KC_FREQ] =
-          augenblicklicherpeak;
-      augenblicklicherpeak = ton_low + ton_high - augenblicklicherpeak;
+  for (i=0,j=2; j>0; j--) {
+    for(k=0; k<0x40; k++) {
+      for (n=0+offset; n <= ( rate / KC_CTC_FREQ_VT256 <<0 ); n++)
+        ton_buffer[TON_SCHRITT][ ( rate * i / KC_CTC_FREQ_VT256 <<0 ) + n ] = augenblicklicherpeak;
+      i++;
     }
-  ton_laenge[TON_SCHRITT] = rate*i/KC_FREQ;
-  
+    augenblicklicherpeak = ton_low + ton_high - augenblicklicherpeak;
+  }
+  ton_laenge[TON_SCHRITT] = (rate * (i-1) / KC_CTC_FREQ_VT256 <<0) + n-1;
+
   /* TON_STEINE */
   augenblicklicherpeak=ton_low;
-  for (i=0,j=0xfc; ; j++,j&=0xff)
-    {
-      if (j == 0x1c) break;
-      for(k=0;k<j;k++)
-	ton_buffer[TON_STEINE][offset+rate*i++/KC_FREQ] =
-          augenblicklicherpeak;
-      augenblicklicherpeak = ton_low + ton_high - augenblicklicherpeak;
+  for (i=0,j=0x0ff; ; j++) {
+    if (j > 256) j = 1;
+    if (j == 0x12) break; //j^TC-Reihe: 255,256,1...18 (^0x14 loops)
+    for(k=0;k<j;k++){
+      for (n = 0; n <= ( rate / KC_CTC_FREQ_VT16 <<0 ); n++)
+        ton_buffer[TON_STEINE][ ( rate * i / KC_CTC_FREQ_VT16 <<0 ) + n ] = augenblicklicherpeak;
+      i++;
     }
-  ton_laenge[TON_STEINE] = rate*i/KC_FREQ;
-  
+    augenblicklicherpeak = ton_low + ton_high - augenblicklicherpeak;
+  }
+  ton_laenge[TON_STEINE] = (rate * (i-1) / KC_CTC_FREQ_VT16 <<0) + n-1;
+
   /* TON_DIAMANT */
   augenblicklicherpeak=ton_low;
-  for (i=0,j=0x40; j>0; j--)
-    {
-      for(k=0;k<j;k++)
-	ton_buffer[TON_DIAMANT][offset+rate*i++/KC_FREQ] =
-          augenblicklicherpeak;
-      augenblicklicherpeak = ton_low + ton_high - augenblicklicherpeak;
+  for (i=0,j=0x40; j>0; j--) {
+    for(k=0;k<j;k++) {
+      for (n = 0; n <= ( rate / KC_CTC_FREQ_VT16 <<0 ); n++)
+        ton_buffer[TON_DIAMANT][ ( rate * i / KC_CTC_FREQ_VT16 <<0 ) + n ] = augenblicklicherpeak;
+      i++;
     }
-  ton_laenge[TON_DIAMANT] = rate*i/KC_FREQ;
+    augenblicklicherpeak = ton_low + ton_high - augenblicklicherpeak;
+  }
+  ton_laenge[TON_DIAMANT] = (rate * (i-1) / KC_CTC_FREQ_VT16 <<0) + n-1;
 
   if (sndheader)
     {
@@ -310,7 +314,7 @@ Bool Check_NAS(Bool msg)
   else
   {
     sample_rate = AuServerMaxSampleRate(auserver);
-    if (sample_rate > KC_FREQ) sample_rate = KC_FREQ;
+    if (sample_rate > TON_DSP_RATE) sample_rate = TON_DSP_RATE;
     Fill_TonBuffer(TON_NAS_LOW, TON_NAS_HIGH, sample_rate, False);
     for (i=0; i<3; i++)
     {

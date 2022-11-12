@@ -2,7 +2,7 @@
 Name=xdigger
 Comment=Arcade diamonds digging game.
 Type=Application
-Exec=xdigger -3
+Exec=xdigger -3 -vert240
 Icon=xdigger
 Categories=Game;
 Terminal=false
