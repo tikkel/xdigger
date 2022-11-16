@@ -1,10 +1,10 @@
 [![C/C++ CI](https://github.com/tikkel/xdigger/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/tikkel/xdigger/actions/workflows/c-cpp.yml)
 [![CodeQL](https://github.com/tikkel/xdigger/actions/workflows/codeql.yml/badge.svg)](https://github.com/tikkel/xdigger/actions/workflows/codeql.yml)
 
-# XDigger is a game for XWindows.
+# XDigger is a game for UNIX-XWindows.
 
-xdigger is the X-version of the (KC85-)Digger game.
-You are a little (digger-)man and have to collect diamonds.
+ xdigger is the X-version of the (KC85-)Digger game.
+ You are a little (digger-)man and have to collect diamonds.
 
 Digger was originally developed for the KC 85/3 and KC 85/4.
 The program code was by Alexander Lang, the graphics were by Martin Guth, the titlegraphic by Stefan Dahlke.
