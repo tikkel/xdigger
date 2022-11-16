@@ -2,11 +2,20 @@
 [![CodeQL](https://github.com/tikkel/xdigger/actions/workflows/codeql.yml/badge.svg)](https://github.com/tikkel/xdigger/actions/workflows/codeql.yml)
 
 # XDigger is a game for XWindows.
+
+xdigger is the X-version of the (KC85-)Digger game.
 You are a little (digger-)man and have to collect diamonds.
 
 Digger was originally developed for the KC 85/3 and KC 85/4.
 The program code was by Alexander Lang, the graphics were by Martin Guth, the titlegraphic by Stefan Dahlke.
 The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexander Lang and Heiko Schade.
+
+The arrow keys will move the man
+Esc or C-b restarts the level
+x returns to the main menu
+q exits the game
++ and - will change the size of the window
+
 -------------------------------------------------------------------------------
 
 e.g. on Ubuntu - Install the following dependencies:
