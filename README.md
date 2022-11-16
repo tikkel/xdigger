@@ -4,6 +4,9 @@
 # XDigger is a game for XWindows.
 You are a little (digger-)man and have to collect diamonds.
 
+Digger was originally developed for the KC 85/3 and KC 85/4.
+The program code was by Alexander Lang, the graphics were by Martin Guth, the titlegraphic by Stefan Dahlke.
+The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexander Lang and Heiko Schade.
 -------------------------------------------------------------------------------
 
 e.g. on Ubuntu - Install the following dependencies:
@@ -60,6 +63,6 @@ Levels created by:
 
 
 Original programmed by:
-*Alexander Lang (lang@mueritz-comp.de)
-*Jan Fricke (fricke@rz.uni-greifswald.de) (KC85-sound emulation)
+* Alexander Lang (lang@mueritz-comp.de)
+* Jan Fricke (fricke@rz.uni-greifswald.de) (KC85-sound emulation)
 
