@@ -60,6 +60,6 @@ Levels created by:
 
 
 Original programmed by:
-Alexander Lang
-lang@mueritz-comp.de
+*Alexander Lang (lang@mueritz-comp.de)
+*Jan Fricke (fricke@rz.uni-greifswald.de) (KC85-sound emulation)
 
