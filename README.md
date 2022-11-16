@@ -15,7 +15,7 @@ The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexan
 * <b>q</b> exits the game
 * <b>+</b> and <b>-</b> will change the size of the window
 
--------------------------------------------------------------------------------
+<hl></hl>
 
 e.g. on Ubuntu - Install the following dependencies:
 * xutils-dev libx11-dev libxext-dev
@@ -37,7 +37,7 @@ configure.h file.
 
 -------------------------------------------------------------------------------
 
-Levels created by:
+Levels created by:<br>
  1 Heiko Schade
  2 Heiko Schade
  3 Heiko Schade
