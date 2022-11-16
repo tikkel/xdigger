@@ -11,7 +11,7 @@ The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexan
 
 * The [arrow keys] will move the man
 * [Esc] or [C-b] restarts the level
-* [x] or [m] returns to the main menu
+* <x> or [m] returns to the main menu
 * [q] exits the game
 * [+] and [-] will change the size of the window
 
