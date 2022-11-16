@@ -52,9 +52,7 @@ jobs:
 
     - name: install deps
       run: sudo apt-get install xutils-dev libx11-dev libxext-dev
-    - name: Imake
-      run: Imake
-    - name: Makefile
+    - name: make Makefile
       run: xmkmf
     - name: fix Makefile
       run: sed -i 's/-D_BSD_SOURCE -D_SVID_SOURCE/-D_DEFAULT_SOURCE/g' Makefile
