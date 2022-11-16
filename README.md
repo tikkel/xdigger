@@ -14,6 +14,7 @@ The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexan
 * <b>x</b> or <b>m</b> returns to the main menu
 * <b>q</b> exits the game
 * <b>+</b> and <b>-</b> will change the size of the window
+* At startscreen: <b>p</b> for play, <b>l</b> for Levelpreview and <b>e</b> for Leveleditor
 
 <hr>
 
