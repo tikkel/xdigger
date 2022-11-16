@@ -17,8 +17,8 @@ jobs:
       run: sudo apt-get install xutils-dev libx11-dev libxext-dev
     - name: Imake
       run: xmkmf
-    - name: make
-      run: make
+    - name: Imake patch for Linux
+      run: sed -i 's/-D_BSD_SOURCE -D_SVID_SOURCE/-D_DEFAULT_SOURCE/g' Makefile
     - name: make clean
       run: make clean
     - name: make
