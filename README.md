@@ -3,18 +3,17 @@
 
 # XDigger is a game for UNIX-XWindows.
 
-xdigger is the X-version of the (KC85-)Digger game.<br>
-You are a little (digger-)man and have to collect diamonds.<br>
+XDigger is the X-version of the (KC85-)Digger game. You are a little (digger-)man and have to collect diamonds.<br>
 
-Digger was originally developed for the KC 85/3 and KC 85/4.
-The program code was by Alexander Lang, the graphics were by Martin Guth, the titlegraphic by Stefan Dahlke.
+Digger was originally developed for the KC 85/3 and KC 85/4.<br>
+The program code was by Alexander Lang, the graphics were by Martin Guth, the titlegraphic by Stefan Dahlke.<br>
 The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexander Lang and Heiko Schade.
 
-The arrow keys will move the man
-Esc or C-b restarts the level
-x returns to the main menu
-q exits the game
-+ and - will change the size of the window
+* The [arrow keys] will move the man
+* [Esc] or [C-b] restarts the level
+* [x] or [m] returns to the main menu
+* [q] exits the game
+* [+] and [-] will change the size of the window
 
 -------------------------------------------------------------------------------
 
