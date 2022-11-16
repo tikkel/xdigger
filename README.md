@@ -7,22 +7,20 @@ You are a little (digger-)man and have to collect diamonds.
 -------------------------------------------------------------------------------
 
 e.g. on Ubuntu:
-* install the following dependencies:
-** xutils-dev libx11-dev libxext-dev
-** make
-** gcc
-** libfuse2 osspd osspd-pulseaudio (/dev/dsp <- osspd.service)
+install the following dependencies:
+* xutils-dev libx11-dev libxext-dev
+* make
+* gcc
+* libfuse2 osspd osspd-pulseaudio (for local sound)
 
-Now you can test the game. If you want to install the game
-do the following two steps:
-
- * xmkmf
- * sed -i 's/-D_BSD_SOURCE -D_SVID_SOURCE/-D_DEFAULT_SOURCE/g' Makefile (imake bug workaround)
- * make
- * ./xdigger -h
- * ./xdigger -6 -sound dsp
- * make install (as root)
- * make install.man (as root)
+Now you can compile and run the game:
+* xmkmf
+* sed -i 's/-D_BSD_SOURCE -D_SVID_SOURCE/-D_DEFAULT_SOURCE/g' Makefile (imake bug workaround)
+* make
+* ./xdigger -h
+* ./xdigger -3 -vert240 -d
+* make install (as root)
+* make install.man (as root)
 
 If you want to use NAS (Network Audio System) or RPlay, edit first the 
 configure.h file.
