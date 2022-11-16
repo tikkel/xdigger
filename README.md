@@ -15,7 +15,7 @@ The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexan
 * <b>q</b> exits the game
 * <b>+</b> and <b>-</b> will change the size of the window
 
-<hl></hl>
+<hr>
 
 e.g. on Ubuntu - Install the following dependencies:
 * xutils-dev libx11-dev libxext-dev
@@ -35,7 +35,7 @@ Now you can compile and run the game:
 If you want to use NAS (Network Audio System) or RPlay, edit first the 
 configure.h file.
 
--------------------------------------------------------------------------------
+<hr>
 
 Levels created by:<br>
  1 Heiko Schade
@@ -70,7 +70,6 @@ Levels created by:<br>
 30 Alexander Lang
 
 
-Original programmed by:
-* Alexander Lang (lang@mueritz-comp.de)
-* Jan Fricke (fricke@rz.uni-greifswald.de) (KC85-sound emulation)
-
+Original programmed by:<br>
+Alexander Lang (lang@mueritz-comp.de)<br>
+Jan Fricke (fricke@rz.uni-greifswald.de) (KC85-sound emulation)<br>
