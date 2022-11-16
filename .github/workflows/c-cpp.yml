@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: install deps
+      run: apt install xutils-dev libx11-dev libxext-dev
     - name: Imake
       run: xmkmf
     - name: make
