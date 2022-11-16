@@ -18,9 +18,9 @@ The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexan
 <hr>
 
 <b>Startscreen</b><br>
-<img src="./screenshots/digger_startscreen.png"/>
+<img src="./screenshots/digger_startscreen.png"/><br>
 <b>Ingame</b><br>
-<img src="./screenshots/digger_ingame.png"/>
+<img src="./screenshots/digger_ingame.png"/><br>
 <b>Leveleditor</b><br>
 <img src="./screenshots/digger_leveleditor.png"/>
 
