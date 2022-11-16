@@ -10,10 +10,10 @@ The program code was by Alexander Lang, the graphics were by Martin Guth, the ti
 The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexander Lang and Heiko Schade.
 
 * The <b>arrow keys</b> will move the man
-* [Esc] or [C-b] restarts the level
-* <x> or [m] returns to the main menu
-* [q] exits the game
-* [+] and [-] will change the size of the window
+* <b>Esc</b> or <b>C-b</b> restarts the level
+* <b>x</b> or <b>m</b> returns to the main menu
+* <b>q</b> exits the game
+* <b>+</b> and <b>-</b> will change the size of the window
 
 -------------------------------------------------------------------------------
 
