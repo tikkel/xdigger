@@ -6,8 +6,7 @@ You are a little (digger-)man and have to collect diamonds.
 
 -------------------------------------------------------------------------------
 
-e.g. on Ubuntu:
-install the following dependencies:
+e.g. on Ubuntu - Install the following dependencies:
 * xutils-dev libx11-dev libxext-dev
 * make
 * gcc
@@ -15,7 +14,7 @@ install the following dependencies:
 
 Now you can compile and run the game:
 * xmkmf
-* sed -i 's/-D_BSD_SOURCE -D_SVID_SOURCE/-D_DEFAULT_SOURCE/g' Makefile (imake bug workaround)
+* sed -i 's/-D_BSD_SOURCE -D_SVID_SOURCE/-D_DEFAULT_SOURCE/g' Makefile (Imake bug workaround)
 * make
 * ./xdigger -h
 * ./xdigger -3 -vert240 -d
