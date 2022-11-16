@@ -17,11 +17,11 @@ The levels were developed by Thomas Carstens, Andrea Ernert, Martin Guth, Alexan
 
 <hr>
 
-### Startscreen
+<b>Startscreen</b><br>
 <img src="./screenshots/digger_startscreen.png"/>
-### Ingame
+<b>Ingame</b><br>
 <img src="./screenshots/digger_ingame.png"/>
-### Leveleditor
+<b>Leveleditor</b><br>
 <img src="./screenshots/digger_leveleditor.png"/>
 
 <hr>
