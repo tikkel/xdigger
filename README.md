@@ -1,5 +1,5 @@
 [![C/C++ CI](https://github.com/tikkel/xdigger/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/tikkel/xdigger/actions/workflows/c-cpp.yml)
-[![.github/workflows/codeql.yml](https://github.com/tikkel/xdigger/actions/workflows/codeql.yml/badge.svg)](https://github.com/tikkel/xdigger/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/tikkel/xdigger/actions/workflows/codeql.yml/badge.svg)](https://github.com/tikkel/xdigger/actions/workflows/codeql.yml)
 
 # XDigger is a game for XWindows.
 You are a little (digger-)man and have to collect diamonds.
